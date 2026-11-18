@@ -1,0 +1,29 @@
+<head>
+    <link rel="stylesheet" href="estilos.css">
+
+    <style>
+        h1 {
+            /* El título aparece en verde. Como tanto la hoja externa como la etiqueta style tienen la misma especificidad, prevalece el ultimo que se lee en el orden del documento (la etiqueta style) */
+            color: green;
+
+            /* El tamaño será de 30 pixeles. AUnque el color se sobreescribe en el style, la propiedad font-size, definida en estilos.css no entra en conflicto con nada, por lo que se mantiene */
+        }
+
+        p {
+            /* El primer parrafo aparece en naranja, ya que la regla interna del style sobreescribe al color de estilos.css al estar declarada despues */
+            color: orange;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="color: black;">Mi página web</h1>
+
+    <p>Primer párrafo.</p>
+
+    <!-- El segundo parrafo aparece en rojo. Los estilos en linea tienen mayor prioridad que los estilos internos y externos. -->
+    <p style="color: red;">Segundo párrafo.</p>
+
+</body>
